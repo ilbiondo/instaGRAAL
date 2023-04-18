@@ -1976,14 +1976,9 @@ class sampler:
         self.module = pycuda.compiler.SourceModule(
             fstr,
             no_extern_c=True,
-            options=[
-                # options=["--cubin", "-dc=true", "-lcudadevrt", "-m64",
-                #          "--keep",
-                # options=["--cubin","-lcudadevrt", "-m64",
+            options=["--gpu-architecture=sm_60",
+                     "--Wno-deprecated-declarations",
             ],
-            # options=["-lcudadevrt", "-m64"],
-            arch="compute_60",
-            code="sm_60",
         )
 
         # self.sub_evaluate_likelihood_sparse =
