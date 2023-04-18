@@ -1982,6 +1982,8 @@ class sampler:
                 # options=["--cubin","-lcudadevrt", "-m64",
             ],
             # options=["-lcudadevrt", "-m64"],
+            arch="compute_60",
+            code="sm_60",
         )
 
         # self.sub_evaluate_likelihood_sparse =
