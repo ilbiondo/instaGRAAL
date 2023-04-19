@@ -1980,6 +1980,7 @@ class sampler:
                      "--Wno-deprecated-declarations",
             ],
             arch="compute_60",
+            code="sm_60",
         )
 
         # self.sub_evaluate_likelihood_sparse =
