@@ -1979,6 +1979,7 @@ class sampler:
             options=["--gpu-architecture=sm_60",
                      "--Wno-deprecated-declarations",
             ],
+            arch="compute_60",
         )
 
         # self.sub_evaluate_likelihood_sparse =
