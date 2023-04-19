@@ -2953,7 +2953,7 @@ extern "C"
 
     __inline__ __device__ double warpReduceSum(double val) {
         for (int offset = warpSize/2; offset > 0; offset /= 2)
-            val += __shfl_down(val, offset);
+            val += __shfl_down_sync(val, offset);
         return val;
     }
 
