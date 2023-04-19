@@ -2944,7 +2944,7 @@ extern "C"
     }
 
 
-    __device__ inline double __shfl_down(double var, unsigned int srcLane, int width=32) {
+    __device__ inline double __shfl_down_sync(0xFFFFFFFF, double var, unsigned int srcLane, int width=32) {
         int2 a = *reinterpret_cast<int2*>(&var);
         a.x = __shfl_down_sync(0xFFFFFFFF, a.x, srcLane, width);
         a.y = __shfl_down_sync(0xFFFFFFFF, a.y, srcLane, width);
